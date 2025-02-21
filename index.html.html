@@ -1,0 +1,77 @@
+/* index.html */
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilmenize Gerek Yok - Modern Fizik Eğitim Platformu</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">Bilmenize <span>Gerek Yok!</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Ana Sayfa</a></li>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">Bilimsel İçerikler</a></li>
+                    <li><a href="#">Ders İçerikleri</a></li>
+                    <li><a href="#">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Fizik Dünyasını Keşfedin</h1>
+                <p>Modern yaklaşımlar ve interaktif içeriklerle fiziği öğrenin.</p>
+                <a href="#" class="btn">Derslere Başlayın</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+/* styles.css */
+:root {
+    --primary-color: #3a86ff;
+    --text-color: #343a40;
+}
+body {
+    background-color: #f8f9fa;
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.hero {
+    text-align: center;
+    padding: 5rem 0;
+}
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+/* script.js */
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("Site yüklendi");
+});
+
+/* firebase.json */
+{
+    "hosting": {
+        "public": "public",
+        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+        "rewrites": [{ "source": "**", "destination": "/index.html" }]
+    }
+}
